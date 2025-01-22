@@ -169,27 +169,28 @@ class Home extends StatelessWidget {
                 },
                 child: Text("Clear")),
 
-
             SizedBox(
               height: 250,
               width: 250,
-              child:  ListView.builder(
+              child: ListView.builder(
                 itemCount: 15,
-                itemBuilder: (contex,index){
-                  return  ListTile(
+                itemBuilder: (context, index) {
+                  return ListTile(
                     title: Text("Taufiqur Rahman ${index}"),
                     subtitle: Text("Software Engineer"),
-                    leading: Icon(Icons.account_circle,size: 50,),
+                    leading: Icon(
+                      Icons.account_circle,
+                      size: 50,
+                    ),
                     trailing: Icon(Icons.send),
-                    onTap: (){
+                    onTap: () {
                       print("I'm ListTile");
                     },
-                    onLongPress: (){
+                    onLongPress: () {
                       print("I'm ListTile long press");
                     },
                   );
                 },
-
               ),
             ),
 
@@ -239,10 +240,6 @@ class Home extends StatelessWidget {
                   )),
             ),
 
-
-
-
-
             ///Flutter old class
             Center(
               child: ElevatedButton(
@@ -252,32 +249,46 @@ class Home extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                   ),
                 ),
-                onPressed: (){
+                onPressed: () {
                   print("This is a button");
-                }, child:
-
-              Text("Send",style: TextStyle(color: Colors.white,fontSize: 25),),
-
-
+                },
+                child: Text(
+                  "Send",
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
               ),
             ),
-            Icon(Icons.add_a_photo,size: 50,color: Colors.red,),
-            TextButton(onPressed: (){
-              print("I'm text button");
-            }, child: Text("Click me",style: TextStyle(color: Colors.blue,fontSize: 25),)),
-            IconButton(onPressed: (){
-              print("I'm icon button");
-            }, icon: Icon(Icons.add_a_photo,size: 50,color: Colors.red,)),
-
+            Icon(
+              Icons.add_a_photo,
+              size: 50,
+              color: Colors.red,
+            ),
+            TextButton(
+                onPressed: () {
+                  print("I'm text button");
+                },
+                child: Text(
+                  "Click me",
+                  style: TextStyle(color: Colors.blue, fontSize: 25),
+                )),
+            IconButton(
+                onPressed: () {
+                  print("I'm icon button");
+                },
+                icon: Icon(
+                  Icons.add_a_photo,
+                  size: 50,
+                  color: Colors.red,
+                )),
 
             InkWell(
-              onTap: (){
+              onTap: () {
                 print("I'm inkwell");
               },
-              onHover: (value){
+              onHover: (value) {
                 print("I'm inkwell hover");
               },
-              onLongPress: (){
+              onLongPress: () {
                 print("I'm inkwell long press");
               },
               child: Container(
@@ -285,11 +296,19 @@ class Home extends StatelessWidget {
                 width: 200,
                 margin: EdgeInsets.only(top: 50),
                 alignment: Alignment.center,
-                decoration:BoxDecoration(
+                decoration: BoxDecoration(
                     color: Colors.deepPurpleAccent,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
-                    border: Border.all(color: Colors.black,width: 5),
-                    gradient: LinearGradient(colors: [Colors.yellow.shade300,Colors.orange.withOpacity(0.5),Colors.red,Colors.black],
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20)),
+                    border: Border.all(color: Colors.black, width: 5),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.yellow.shade300,
+                        Colors.orange.withOpacity(0.5),
+                        Colors.red,
+                        Colors.black
+                      ],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -298,23 +317,23 @@ class Home extends StatelessWidget {
                           color: Colors.grey,
                           blurRadius: 10,
                           spreadRadius: 5,
-                          offset: Offset(5,5)
-                      )
-                    ]
-                ) ,
-                child: Text("This is a container",style: TextStyle(color: Colors.blue,fontSize: 25),) ,
+                          offset: Offset(5, 5))
+                    ]),
+                child: Text(
+                  "This is a container",
+                  style: TextStyle(color: Colors.blue, fontSize: 25),
+                ),
               ),
             ),
 
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 print("I'm GestureDetector");
               },
-              onDoubleTap: (){
+              onDoubleTap: () {
                 print("I'm GestureDetector double tap");
               },
-
-              onLongPress: (){
+              onLongPress: () {
                 print("I'm GestureDetector long press");
               },
               child: Container(
@@ -322,11 +341,18 @@ class Home extends StatelessWidget {
                 width: 200,
                 margin: EdgeInsets.only(top: 50),
                 alignment: Alignment.center,
-                decoration:BoxDecoration(
+                decoration: BoxDecoration(
                     color: Colors.deepPurpleAccent,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
-                    border: Border.all(color: Colors.black,width: 5),
-                    gradient: LinearGradient(colors: [Colors.green.shade300,Colors.orange.withOpacity(0.5),Colors.black],
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20)),
+                    border: Border.all(color: Colors.black, width: 5),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.green.shade300,
+                        Colors.orange.withOpacity(0.5),
+                        Colors.black
+                      ],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -335,11 +361,12 @@ class Home extends StatelessWidget {
                           color: Colors.grey,
                           blurRadius: 10,
                           spreadRadius: 10,
-                          offset: Offset(0,5)
-                      )
-                    ]
-                ) ,
-                child: Text("This is a container",style: TextStyle(color: Colors.blue,fontSize: 25),) ,
+                          offset: Offset(0, 5))
+                    ]),
+                child: Text(
+                  "This is a container",
+                  style: TextStyle(color: Colors.blue, fontSize: 25),
+                ),
               ),
             )
           ],
