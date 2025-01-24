@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -9,32 +8,79 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List<String> _task = [];
+  TextEditingController _taskController = TextEditingController();
 
-  int _count =0;
-  increementCounter(){
-    setState(() {
+  _addTask() {
+    if (_taskController.text.isNotEmpty) {
+      setState(() {
+        _task.add(_taskController.text);
+        _taskController.clear();
+      });
+    }
+  }
 
-    });
-    _count++;
-    print(_count);
-  }
-  decrementCounter(){
+  _removeTask(int index) {
     setState(() {
-      _count--;
+      _task.removeAt(index);
     });
-    print(_count);
   }
+
+  _removeAll() {
+    setState(() {
+      _task.clear();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Text(_count.toString(),style: TextStyle(fontSize: 60,fontWeight: FontWeight.bold,color: Colors.red),),
-
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
+        title: Text(
+          "Simple To-do List",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
       ),
-
-      floatingActionButton: FloatingActionButton(onPressed: increementCounter,child: Icon(Icons.add,size: 40),),
-      //floatingActionButton: FloatingActionButton(onPressed: decrementCounter,child: Icon(Icons.remove,size: 30,),),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: _taskController,
+              decoration: InputDecoration(
+                hintText: "Enter your task",
+                border: OutlineInputBorder(),
+                suffixIcon: IconButton(
+                  onPressed: _addTask,
+                  icon: Icon(Icons.add),
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView.builder(
+                itemCount: _task.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    child: ListTile(
+                      title: Text(_task[index]),
+                      trailing: IconButton(
+                        onPressed: () => _removeTask(index),
+                        icon: Icon(Icons.delete, color: Colors.red),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _removeAll,
+        child: Icon(Icons.delete_forever),
+      ),
     );
   }
 }
