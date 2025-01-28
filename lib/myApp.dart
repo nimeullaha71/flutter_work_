@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_work/Module9_class2.dart';
 import 'package:flutter_work/Module9_class_1_mediaQuery_wrap.dart';
 import 'Home.dart';
 
@@ -23,8 +24,8 @@ class myApp extends StatelessWidget {
           )
       ),
       title: 'Ostad Flutter app',
-      //home: MediaQueryExample(),
-      home:LayoutBuilderExample(),
+      home: module9Class2(),
+
     );
   }
 }
