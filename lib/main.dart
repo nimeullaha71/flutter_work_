@@ -4,11 +4,10 @@ import 'package:flutter/material.dart';
 import 'myApp.dart';
 
 void main() {
-  DevicePreview(
-    builder: (context) => myApp()
+  runApp(
+    DevicePreview(
+      enabled: true, // Set to false if not testing responsiveness
+      builder: (context) => const MyApp(),
+    ),
   );
 }
-
-
-
-

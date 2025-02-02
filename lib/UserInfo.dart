@@ -21,7 +21,7 @@ class UserInfo extends StatelessWidget {
 
             }, child: Text("Back")),
             ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>page1()));
+              //Navigator.push(context, MaterialPageRoute(builder: (context)=>page1()));
             }, child: Text("Next"))
 
           ],

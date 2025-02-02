@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-class sizerResponsiveBuilder extends StatelessWidget {
-  const sizerResponsiveBuilder({super.key});
+class SizerResponsiveBuilder extends StatelessWidget {
+  const SizerResponsiveBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
