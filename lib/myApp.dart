@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_work/Module9_class2.dart';
 import 'package:flutter_work/Module9_class_1_mediaQuery_wrap.dart';
+import 'package:flutter_work/module11_class1.dart';
 import 'package:flutter_work/module9_class3_sizer_responsiveBuilder.dart';
 import 'Home.dart';
 import 'package:sizer/sizer.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           title: 'Ostad Flutter App',
-          home: const SizerResponsiveBuilder(),
+          home: Module11Class1(),
         );
       },
     );
