@@ -6,6 +6,8 @@ import 'package:flutter_work/module11_class1.dart';
 import 'package:flutter_work/module9_class3_sizer_responsiveBuilder.dart';
 import 'Home.dart';
 import 'package:sizer/sizer.dart';
+import 'calculator.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           title: 'Ostad Flutter App',
-          home: Module11Class1(),
+          home: calculatorApp(),
         );
       },
     );
