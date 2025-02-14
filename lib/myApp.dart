@@ -7,6 +7,7 @@ import 'package:flutter_work/module9_class3_sizer_responsiveBuilder.dart';
 import 'package:flutter_work/water_tracker.dart';
 import 'Home.dart';
 import 'package:sizer/sizer.dart';
+import 'Module12_class_1.dart';
 import 'calculator.dart';
 
 class MyApp extends StatelessWidget {
@@ -22,12 +23,13 @@ class MyApp extends StatelessWidget {
           locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
           theme: ThemeData(
+            brightness: Brightness.dark,
             primaryColor: Colors.deepPurpleAccent,
             appBarTheme: const AppBarTheme(
               backgroundColor: Colors.red, // Updated property
               centerTitle: true,
             ),
-            scaffoldBackgroundColor: Colors.white,
+            //scaffoldBackgroundColor: Colors.white,
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.indigo,
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           title: 'Ostad Flutter App',
-          home: waterTracker(),
+          home: ExpenseTracker(),
         );
       },
     );
